@@ -2,6 +2,7 @@ async function getDb() {
   if (window._db) return window._db;
   const app = cloudbase.init({
     env: window.APP_CONFIG.envId,
+    region: "ap-shanghai",
     accessKey: window.APP_CONFIG.accessKey
   });
   window._db = app.database();
