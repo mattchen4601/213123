@@ -1,0 +1,17 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>用户页</title><link rel="stylesheet" href="style.css"></head>
+<body onload="loadUserPage()"><div class="container">
+<div class="banner"><div class="header"><div class="header-left"><img src="hqu-logo.png" class="logo" alt=""><div class="title">厦门华侨大学陈广玮给妈妈的资金安全提醒平台</div></div><button class="btn" onclick="logout()">退出登录</button></div></div>
+<div class="grid grid-5 mt2">
+<div class="card"><div class="small muted">当前用户</div><div id="u_name" class="title" style="font-size:26px"></div></div>
+<div class="card"><div class="small muted">余额</div><div id="u_balance" class="title" style="font-size:26px"></div></div>
+<div class="card"><div class="small muted">提现次数</div><div id="u_wcount" class="title" style="font-size:26px"></div></div>
+<div class="card"><div class="small muted">单次提现额度</div><div id="u_wlimit" class="title" style="font-size:26px"></div></div>
+<div class="card"><div class="small muted">状态</div><div id="u_status" class="title" style="font-size:26px"></div></div>
+</div>
+<div class="card mt2"><div class="title" style="font-size:24px">操作区</div><div class="row mt2"><input id="amountInput" class="input" placeholder="输入金额" style="max-width:360px"><button class="btn" onclick="submitRecharge()">充值</button><button class="btn btn-dark" onclick="submitWithdraw()">提现</button></div><div id="userMsg" class="small mt"></div></div>
+<div id="qrSection" class="card mt2 hidden"><div class="title" style="font-size:24px">充值图片</div><img src="recharge-qr.jpg" class="product-img mt2" style="height:auto;max-width:420px"></div>
+<div class="card mt2"><div class="title" style="font-size:24px">风险案例商品区</div><div id="products" class="grid grid-2 mt2"></div></div>
+<div class="card mt2"><div class="title" style="font-size:24px">仓库</div><div id="inventory" class="grid grid-2 mt2"></div></div>
+</div>
+<script src="https://imgcache.qq.com/qcloud/cloudbase-js-sdk/2.14.0/cloudbase.full.js"></script>
+<script src="config.js"></script><script src="app.js"></script></body></html>
